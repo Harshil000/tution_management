@@ -1,7 +1,7 @@
-'use client'
+"use client"
 import { useState, useEffect } from "react"
 
-const page = () => {
+const Page = () => {
     const [Admin, setAdmin] = useState({})
     useEffect(() => {
         const fetchdata = async () => {
@@ -43,4 +43,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

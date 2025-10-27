@@ -1,5 +1,6 @@
 import AdminNav from "@/components/AdminNav";
 import { Inter } from "next/font/google";
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,8 +15,9 @@ export default function RootLayout({ children }) {
             <body className={inter.className}>
                 <AdminNav />
                 {children}
-                <script src="https://cdn.lordicon.com/lordicon.js"></script>
-                <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+                {/* Use next/script with a non-blocking strategy instead of synchronous <script> tags */}
+                <Script src="https://cdn.lordicon.com/lordicon.js" strategy="afterInteractive" />
+                <Script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module" strategy="afterInteractive" />
             </body>
         </html>
     );

@@ -1,6 +1,6 @@
-'use client'
+"use client"
 import { useRouter } from 'next/navigation'
-const page = ({ params }) => {
+const Page = ({ params }) => {
   const username = decodeURIComponent(params.username)
   const router = useRouter();
   return (
@@ -16,4 +16,4 @@ const page = ({ params }) => {
   )
 }
 
-export default page
+export default Page

@@ -1,10 +1,10 @@
-'use client'
+"use client"
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const page = () => {
+const Page = () => {
     const [NewUserName, setNewUserName] = useState('')
     const [NewUserID, setNewUserID] = useState('')
     const [NewUserPassword, setNewUserPassword] = useState('')
@@ -199,4 +199,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page
